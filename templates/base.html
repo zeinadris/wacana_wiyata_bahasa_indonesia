@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ judul }}</title>
+
+</head>
+<body>
+
+    <img width="100%" src="{% static banner %}" alt="">
+   <h1> {{ judul }} | {{ subjudul }} </h1>
+
+   <ul>
+        <!-- templates tags -->
+        {% for link,name in nav %}
+
+            <li>
+                <a href="{{ link }}">{{ name }}</a>
+            </li>
+
+        {% endfor %}
+
+   </ul>
+
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, soluta aliquid quia reprehenderit voluptatibus optio neque adipisci placeat quas commodi debitis itaque velit enim! Magnam reprehenderit maxime itaque excepturi asperiores!</p>
+    
+</body>
+</html>
