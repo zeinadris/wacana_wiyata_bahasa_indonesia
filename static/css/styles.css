@@ -1,0 +1,104 @@
+header {
+    margin: 0;
+}
+
+#banner {
+    width: 100%;  
+}
+
+h1 {
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px;
+    margin: 0;
+    background-color: coral;
+}
+
+
+nav ul {
+    background-color: coral;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    color: #fff;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgb(175, 57, 14);
+}
+
+ul {
+    background-color: #fff;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+    float: left;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 #555;
+    margin: auto;
+    max-width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    list-style: none;
+    padding: 10px 10px;
+    overflow: hidden;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: #fff;
+    background-color: blue;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+
+
+footer {
+    background-color: coral;
+    color: #fff;
+    padding: 2px;
+    margin: 0;
+    text-align: center;
+    padding: 10px 10px;
+    overflow: hidden;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}

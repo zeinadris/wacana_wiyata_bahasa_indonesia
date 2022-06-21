@@ -1,21 +1,22 @@
 from multiprocessing import context
-from django.http import HttpResponse
+from turtle import bye
 from django.shortcuts import render
-from . models import Blog
+from blogs.models import Blog
 
+# Create your views here.
 def index(request):
-    blogs = Blog.objects.all()
+    blogid = request.GET.get('id', '')
+    blogs = Blog.objects.get(id = blogid)
     context = {
         'judul' : 'Wacana Wiyata Bahasa Indonesia',
         'subjudul' : 'Blog',
         'banner': 'blog/img/blog.jpg',
-        'logo' : 'blog/img/logo.jpg',
-        'content' : 'img/logo-web.png',
-        'blogs': blogs,
+        'content': 'img/logo-web.png',
+        'blog': blogs,
         'nav' : [
             ['/','Home'],
-            ['/about','About']
+            ['/about','About'],
+            ['/blogs', 'Blogs'],
         ]
     }
     return render(request, 'base.html', context)
-    

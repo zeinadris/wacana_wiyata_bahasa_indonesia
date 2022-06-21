@@ -5,8 +5,10 @@ from django.shortcuts import render
 def index(request):
 
     context ={
-        'judul' : 'Abou Us',
+        'judul': 'Wacana Wiyata Bahasa Indonesia',
+        'subjudul' : 'Abou Us',
         'banner': 'about/img/about-2.jpg',
+        'content' : 'img/logo-web.png',
         'nav' : [
             ['/','Home'],
             ['/blogs','Blog']

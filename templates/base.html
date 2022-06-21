@@ -5,28 +5,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="shortcut icon" href="{% static "img/logo-web.png" %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
     <title>{{ judul }}</title>
+    <style>
+       .card img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        } 
+
+        nav a:hover {
+            background-color: rgb(219, 80, 30);
+    }
+
+    .content {
+            box-shadow: 0 4px 8px 0 #555;
+            margin: auto;
+            max-width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            list-style: none;
+            padding: 10px 10px;
+            overflow: hidden;
+        }
+
+        .logo-content {
+            box-shadow: 0 4px 8px 0 #555;
+            margin: auto;
+            max-width: 20%;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            list-style: none;
+            padding: 20px 10px;
+            overflow: hidden;
+            padding-top: 10px;
+        }
+
+        .logo-content img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        } 
+
+        .card {
+        box-shadow: 0 4px 8px 0 #555;
+        margin: auto;
+        max-width: 500px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        list-style: none;
+        padding: 10px 10px;
+        overflow: hidden;
+    }
+    </style>
 
 </head>
 <body>
 
-    <img width="100%" src="{% static banner %}" alt="">
-   <h1> {{ judul }} | {{ subjudul }} </h1>
+    <header>
+            <h1> {{ judul }} </h1>
+            <img id="banner" src="{% static banner %}" alt="banner">
 
-   <ul>
-        <!-- templates tags -->
-        {% for link,name in nav %}
+        <nav>
+            <ul>
+                    <!-- templates tags -->
+                    {% for link,name in nav %}
 
-            <li>
-                <a href="{{ link }}">{{ name }}</a>
-            </li>
+                        <li>
+                            <a href="{{ link }}">{{ name }}</a>
+                        </li>
 
-        {% endfor %}
+                    {% endfor %}
 
-   </ul>
+            </ul>
+        </nav>
+    </header>
 
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, soluta aliquid quia reprehenderit voluptatibus optio neque adipisci placeat quas commodi debitis itaque velit enim! Magnam reprehenderit maxime itaque excepturi asperiores!</p>
-    
+    <div class="logo-content">
+        <img src="{% static content %}" alt="logo-content">
+    </div>
+    <div class="content">
+        <section>
+                <h2> Welcome to {{ subjudul }}</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates architecto laudantium ratione voluptatem laborum! Voluptatem dignissimos, aliquam nisi quos alias impedit, assumenda illo atque veniam beatae, qui exercitationem magnam reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur accusantium id, nostrum molestiae fugiat culpa natus veritatis ipsam! Non sapiente, nobis distinctio veniam ipsa minima error accusantium ea sed!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sed atque, ut magni delectus libero beatae at nemo voluptas culpa repudiandae animi fugit laboriosam laborum incidunt. Pariatur temporibus nisi ratione!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facere dolorum assumenda quibusdam quisquam vero cumque consequuntur nostrum modi perspiciatis nobis rem, sint harum, placeat optio quaerat accusantium unde aspernatur!
+                </p>
+        </section>
+
+        <div class="detail">
+            {% block blog %}
+            <h3>{{ blog.title }}</h3>
+            <p>{{ blog.id }}</p>
+            <p>{{ blog.desc }}</p>
+            {% endblock %}
+        </div>
+
+        <ul>
+                {% for blog in blogs %}
+                <li>
+                    <div class="card">
+                        <img src="{% static logo %}" alt="logo">
+                        <h3>{{ blog.title }}</h3>
+                        <p>{{ blog.created_at }}</p>
+                        <p><a href="/detail?id={{ blog.id }}"><button>To details Blogs</button></a></p>
+                    </div>
+                </li>
+                {% endfor %}
+
+        </ul>
+        
+    </div>
+
 </body>
+
+<footer>
+    <p>Kelompok 7</p>
+    <p>Project UAS Bahasa Pemograman</p>
+</footer>
+
 </html>
