@@ -5,11 +5,11 @@ from django.urls import include, path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('blogs/', include('blogs.urls')),
     path('', views.welcome),
     path('admin/', admin.site.urls),
     path('about/', include('about.urls')),
-    path('detail/', include('detail.urls'),)
+    path('detail/', include('detail.urls')),
+    path('list_blogs/', include('list_blogs.urls')),
 ] 
 
 urlpatterns += staticfiles_urlpatterns()

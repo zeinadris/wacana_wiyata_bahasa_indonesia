@@ -6,12 +6,16 @@ def index(request):
 
     context ={
         'judul': 'Wacana Wiyata Bahasa Indonesia',
-        'subjudul' : 'Abou Us',
+        'subjudul' : 'About Us',
+        'desc_blogs' : 'Kelompok 7 Anggota : ',
+        'desc_blogs1' : 'Ketua : Nayaka Nadiftya Almas (210101)',
+        'desc_blogs2' : 'Quality Control : Zein Adri Saputro (210101087)',
+        'desc_blogs3' : 'Content Writer : Krisna Febrianti (210101)',
         'banner': 'about/img/about-2.jpg',
         'content' : 'img/logo-web.png',
         'nav' : [
             ['/','Home'],
-            ['/blogs','Blog']
+            ['/list_blogs','Blog']
         ]
     }
 

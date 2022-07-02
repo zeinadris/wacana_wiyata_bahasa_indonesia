@@ -1,15 +1,13 @@
-from multiprocessing import context
-from django.http import HttpResponse
 from django.shortcuts import render
-from . models import Blog
+from . models import ListBlog
 
 def index(request):
-    blogs = Blog.objects.all()
+    blogs = ListBlog.objects.all()
     context = {
         'judul' : 'Wacana Wiyata Bahasa Indonesia',
-        'subjudul' : 'Blog',
-        'banner': 'blog/img/blog.jpg',
-        'logo' : 'blog/img/logo.jpg',
+        'subjudul' : 'Daftar Blog',
+        'banner': 'list-blogs/img/blog.jpg',
+        'logo' : 'list-blogs/img/logo.jpg',
         'content' : 'img/logo-web.png',
         'blogs': blogs,
         'nav' : [
