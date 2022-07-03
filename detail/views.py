@@ -10,7 +10,7 @@ def index(request):
     context = {
         'judul' : 'Wacana Wiyata Bahasa Indonesia',
         'subjudul' : 'Detail Blog',
-        'banner': 'blog/img/blog.jpg',
+        'banner': 'detail/img/detail.jpg',
         'content': 'img/logo-web.png',
         'blog': blogs,
         'nav' : [
