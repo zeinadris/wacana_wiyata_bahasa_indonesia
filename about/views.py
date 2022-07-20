@@ -15,7 +15,7 @@ def index(request):
         'content' : 'img/logo-web.png',
         'nav' : [
             ['/','Home'],
-            ['/list_blogs','Blog']
+            ['/list_blogs','Blogs']
         ]
     }
 
